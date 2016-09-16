@@ -39,6 +39,7 @@ class EditDistance {
 
 		String s = scan.next();
 		String t = scan.next();
+		scan.close();
 		System.out.println(getEditDistance(s, t));
 	}
 
