@@ -1,0 +1,7 @@
+# Directories #
+**/bin
+
+# Eclipse #
+**/.project
+**/.metadata
+**/.classpath
