@@ -9,6 +9,18 @@ public class tree_height {
 		FastScanner() {
 			in = new BufferedReader(new InputStreamReader(System.in));
 		}
+		
+		FastScanner (String fileName) {
+			InputStream file_stream = null;
+			try {
+				file_stream = new FileInputStream(fileName);
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			in = new BufferedReader(new InputStreamReader(file_stream));
+		}
 
 		String next() throws IOException {
 			while (!tok.hasMoreElements())
@@ -25,7 +37,8 @@ public class tree_height {
 		int parent[];
 		
 		void read() throws IOException {
-			FastScanner in = new FastScanner();
+			System.out.println(System.getProperty("user.dir"));
+			FastScanner in = new FastScanner("./test/03");
 			n = in.nextInt();
 			parent = new int[n];
 			for (int i = 0; i < n; i++) {
